@@ -1,0 +1,30 @@
+<div id="authContainer" class="auth-container" onclick="closeAuthContainer(event)">
+    
+    <!-- ! login -->
+    <div class="auth-box" onclick="event.stopPropagation()">
+        <!-- Login Form -->
+        <div id="loginBox">
+            <h2>Login</h2>
+            <form id="loginForm" action="../api/login/login.php" method="POST">
+                <input type="email" placeholder="Email" id="loginEmail" name="email" required>
+                <input type="password" placeholder="Password" id="loginPassword" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <!-- <p>Or</p>
+            <button class="google-login" onclick="googleLogin()">Login with Google</button> -->
+        </div>
+
+        <!-- ! Sign Up Form -->
+        <div id="signupBox" style="display:none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="../api/signup/signup.php" method="POST">
+                <input type="text" placeholder="Name" id="signupName" name="name" required>
+                <input type="email" placeholder="Email" id="signupEmail" name="email" required>
+                <input type="password" placeholder="Password" id="signupPassword" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <!-- <p>Or</p>
+            <button class="google-signup" onclick="googleSignup()">Sign Up with Google</button> -->
+        </div>
+    </div>
+</div>
